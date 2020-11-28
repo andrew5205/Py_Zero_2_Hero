@@ -43,15 +43,38 @@ print("{:+d}".format(42))                           # +42
 dictionary = {"first": "first_name", "last": "last_name"}
 print("{first} {last}".format(**dictionary))                                # first_name last_name
 print("{first} {last}".format(first = "firstName", last = "lastName"))      # firstName lastName
+
 # getitem getattr
 print("{d[first]} {d[last]}".format(d = dictionary))                        # first_name last_name
 data_list = [0, 1, 2, 3, 4, 5, 6 ]
 print({"{d[2]} {d[5]}".format(d = data_list)})                              # {'2 5'}
 
+# accessing from attributes
+class Plant(object):
+    type = "tree from Plant class"
+    kind = [{"name": "oak"}, {"name": "maple"}]
+print("{p.type}".format(p = Plant))                                         # tree from Plant class
+print("{p.type}: {p.kind[1][name]}".format(p = Plant))                      # tree from Plant class: maple
+
+
+# Date time setup:
+from datetime import datetime
+
+print("{:%Y-%m-%d %H:%M}".format(datetime(2020, 11, 27, 12, 30)))           # 2020-11-27 12:30
+
+
+dt = datetime(2020, 11, 27, 12, 50)
+print("{:{dfmt} {tfmt}}".format(dt, dfmt = "%Y-%m-%d", tfmt = "%H:%M"))      # 2020-11-2712:50
 
 
 
-
+# custom object
+class HAL9000(object):
+    def __format__(self, format):
+        if (format == 'open-the-pod-bay-doors'):
+            return "I'm afraid I can't do that."
+        return 'HAL 9000'
+print('{:open-the-pod-bay-doors}'.format(HAL9000()))                         # I'm afraid I can't do that.
 
 
 
