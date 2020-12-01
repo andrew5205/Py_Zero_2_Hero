@@ -12,6 +12,7 @@ print(myList)                                       # ['h', 'e', 'l', 'l', 'o']
 
 # ******************************************************************
 # efficient way in python
+# name_of_list = [(do sth) (for range)]
 
 my_efficient_list = [letter for letter in myString]
 print(my_efficient_list)                            # ['h', 'e', 'l', 'l', 'o']
@@ -60,7 +61,7 @@ print(nested_list)                  # [1, 10, 100, 2, 20, 200, 3, 30, 300]
 
 
 # comprehension way
-# new_list = [appedn(e) (for loop) (2nd for loop) ]
+# new_list = [apped(e) (for loop) (2nd for loop) ]
 nested_list_comp = [ (x * y) for x in [1, 2, 3] for y in [1, 10, 100]]
 print(nested_list)                  # [1, 10, 100, 2, 20, 200, 3, 30, 300]
 
