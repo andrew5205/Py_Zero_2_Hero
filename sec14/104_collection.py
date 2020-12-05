@@ -1,5 +1,7 @@
 
-# Collections Module
+# Collections Module - https://docs.python.org/3/library/collections.html
+
+# collections - container datatypes(dict, list, set, and tuple.)
 
 from collections import Counter
 # counter is basically a dictionary sub-class
@@ -56,7 +58,7 @@ print(d["not yet"])             # 50
 print(d)                        # defaultdict(<function <lambda> at 0x7fd02b098d30>, {'assigned': 100, 'not yet': 50})
 # ************************************************************************************************************************************
 
-
+# namedtuple() - factory function for creating tuple subclasses with named fields
 from collections import namedtuple
 
 # OOP concept
