@@ -19,7 +19,7 @@ print(my_efficient_list)                            # ['h', 'e', 'l', 'l', 'o']
 
 # hint
 # default in append()
-# new_list = [ append(e) (for e in range) (condition)]
+# new_list = [ append(result) (for e in range) (condition)]
 
 my_num_list = [num for num in range(10)]
 print(my_num_list)                                  # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
