@@ -30,8 +30,13 @@ print(mystring[::2])        # acegik
 print(mystring[::-1])       # kjihgfedcba
 
 
+# insertion
+sample_arr = [1, 2, 3]
+sample_arr[0:0] = [-3, -2, -1, 0]
+print(sample_arr)           # [-3, -2, -1, 0, 1, 2, 3]
 
 
-
-
-
+# replacement
+sample_arr2 = [1, 2, 3]
+sample_arr2[:] = [-3, -2, -1, 0]
+print(sample_arr2)          # [-3, -2, -1, 0]
